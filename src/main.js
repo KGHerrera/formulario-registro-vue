@@ -2,14 +2,13 @@ import './assets/main.css'
 
 import { createApp } from 'vue';
 import App from './App.vue';
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
 import TablaAlumnos from './components/TablaAlumnos.vue';
 import LoginForm from './components/LoginForm.vue';
 import store from './store/alumnos.js'; 
 
-// Configura las rutas para Vue Router
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(), // Cambia a createWebHashHistory()
   routes: [
     { path: '/tabla-alumnos', component: TablaAlumnos },
     { path: '/login', component: LoginForm },
